@@ -105,7 +105,6 @@ class  RRT:
             rnd_node = self.get_random_node(signal)
             # Find the nearest node to the rnd_node.
             dist,nearest_ind = self.get_nearest_node_index(self.node_list, rnd_node,self.end) #rnd为随机点,self.为已有路径
-#            print('nearest_ind',nearest_ind)
             nearest_node = self.node_list[nearest_ind]
             
             #d为力障碍物的最近距离
@@ -167,7 +166,6 @@ class  RRT:
                
 
             tmp = self.node_list[-1]
-#            for j in range(len(new_node.path_x)):
             x, y = int(tmp.x), int(tmp.y)
             if(x>=512 or y>=512 or x<0 or y<0):
                 print('alert')
